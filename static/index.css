@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap");
+
+body {
+    background-image: url("./static/images/logo.png");
+    font-family: "Spectral", sans-serif;
+    font-size: 1.5em;
+}
+
+p {
+    margin: 0;
+}
+
+h2 {
+    margin: 0 0 0.5em;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    transform: translate(-2.3em, 0);
+}
+
+.banner .logo {
+    width: 30em;
+}
+
+.caption-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.caption-wrapper .caption {
+    font-size: 3em;
+    margin: 0;
+    transform: translate(3em, -0.75em);
+    z-index: 2;
+    font-family: "Times New Roman", serif;
+    color: #414141;
+}
+
+.introduction {
+    width: 100%;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.introduction p {
+    margin: 0 auto;
+    width: 45em;
+}
+
+.information {
+    width: 30em;
+    display: flex;
+    font-weight: 600;
+    margin: 3em auto 0;
+    justify-content: center;
+}
+
+.information .members {
+    width: 12em;
+    border-right: 1px solid black;
+    padding-right: 2em;
+}
+
+.information .members ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.information li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.information li em {
+    color: black;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.information .contact {
+    width: 13em;
+    margin-left: 2em;
+}
+
+.information .contact p {
+    padding-left: 10px;
+}
+
+.companies {
+    position: absolute;
+    bottom: 2em;
+    left: 2em;
+    display: flex;
+}
+
+.companies img {
+    width: 2em;
+    margin-right: 1em;
+}
+
+@media (max-width: 1025px) {
+    
+    body {
+        font-size: 2em;
+    }
+
+    .banner {
+        transform: translate(0, 0);
+    }
+
+    .banner .logo {
+        width: 20em;
+    }
+
+    .caption-wrapper .caption {
+        font-size: 1em;
+        transform: translate(4em, -0.5em);
+        font-size: 1.5em;
+    }
+
+    .introduction {
+        width: 50%;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        margin: 2em auto 0;
+    }
+
+    .introduction p {
+        margin: 0 auto;
+        width: 30em;
+        text-align: justify;
+    }
+
+    .information {
+        width: 100%;
+        font-weight: 600;
+        display: block;
+        margin: 4em auto;
+        text-align: center;
+    }
+
+    .information .members {
+        width: 100%;
+        border-right: none;
+        padding-right: 2em;
+        text-align: center;
+    }
+
+    .information .members ul {
+        display: inline-block;
+    }
+    
+    .information .contact {
+        width: 13em;
+        margin: 2em auto 0;
+    }
+
+    .companies {
+        position: sticky;
+    }
+}
