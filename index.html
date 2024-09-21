@@ -4,173 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinaca Technologies Pvt. Ltd.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
+        :root {
+            font-size: 16px;
+        }
+        body, html {
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 1920px;
-            height: 1080px;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
             background: white;
         }
         .container {
-            position: relative;
-            width: 1920px;
-            height: 1080px;
+            max-width: 75rem;
+            margin: 0 auto;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            justify-content: center;
         }
         .logo {
-            position: absolute;
-            width: 496px;
-            height: 247px;
-            left: 698px;
-            top: 293px;
+            text-align: center;
+            margin-bottom: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .logo .title {
-            position: absolute;
-            width: 496px;
-            height: 99px;
-            text-align: center;
             color: #000B45;
-            font-size: 32px;
-            font-family: Inter, sans-serif;
+            font-size: 2rem;
             font-weight: 600;
-            line-height: 38.69px;
-            word-wrap: break-word;
-            top: 148px;
+            line-height: 1.2;
+            margin-top: 1.25rem;
         }
         .logo .icon {
-            position: absolute;
-            width: 86.34px;
-            height: 132px;
-            left: 205px;
-            top: 0px;
+            width: 5.40rem;
+            height: 8.25rem;
+            position: relative;
         }
         .icon .background {
-            background: #E1A200;
-            width: 86.34px;
-            height: 93.34px;
+            width: 5.40rem;
+            height: 5.83rem;
         }
-        .icon img {
+        .icon .background img {
             position: absolute;
-            width: 27.64px;
-            height: 35.10px;
-            left: 29.51px;
-            top: 96.90px;
+            width: 100%;
+            height: auto;
+            top: 0;
+            left: 0;
         }
         .description {
-            position: absolute;
-            width: 653px;
-            height: 118px;
-            left: 619px;
-            top: 514px;
             text-align: center;
             color: #7476A4;
-            font-size: 24px;
-            font-family: Inter, sans-serif;
+            font-size: 1.5rem;
             font-weight: 400;
-            line-height: 29.02px;
-            word-wrap: break-word;
+            line-height: 1.2;
+            max-width: 40.8rem;
+            margin: 0 auto 2.5rem;
         }
-        .contact-info {
-            position: absolute;
-            width: 502px;
-            height: 143px;
-            left: 1040px;
-            top: 797px;
-        }
-        .contact-info .title {
-            color: #7476A4;
-            font-size: 24px;
-            font-family: Inter, sans-serif;
-            font-weight: 600;
-            line-height: 29.02px;
-        }
-        .contact-info .details {
-            color: #000B45;
-            font-size: 24px;
-            font-family: Inter, sans-serif;
-            font-weight: 400;
-            line-height: 29.02px;
+        .content-wrapper {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 50rem;
+            margin-top: 2.5rem;
         }
         .team {
-            position: absolute;
-            width: 338px;
-            height: 74px;
-            left: 580px;
-            top: 795px;
+            flex: 1;
         }
         .team .member {
             color: #000B45;
-            font-size: 24px;
-            font-family: Inter, sans-serif;
+            font-size: 1.5rem;
             font-weight: 600;
-            line-height: 29.02px;
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.25rem;
         }
         .social-icon {
-            width: 24px;
-            height: 24px;
-            position: absolute;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0.625rem;
+            position: relative;
+            display: flex;
             justify-content: center;
             align-items: center;
-            display: inline-flex;
+            border-radius: 0.1875rem;
+            overflow: hidden;
         }
-        .social-icon .background {
-            background: #0077B5;
-            width: 24px;
-            height: 24px;
-        }
-        .social-icon .dot {
-            background: white;
-            width: 14.90px;
-            height: 15px;
-            position: absolute;
-            left: 4.55px;
-            top: 4.50px;
+        .social-icon svg {
+            width: 100%;
+            height: auto;
+            fill: #0077B5;
         }
         .separator {
-            position: absolute;
-            width: 188px;
-            height: 0px;
-            left: 946px;
-            top: 789px;
-            transform: rotate(90deg);
-            transform-origin: 0 0;
-            border: 1px #000B45 solid;
+            width: 0.0625rem;
+            background: #000B45;
+            margin: 0 2.5rem;
+        }
+        .contact-info {
+            flex: 1;
+        }
+        .contact-info .title {
+            color: #7476A4;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.625rem;
+        }
+        .contact-info .details {
+            color: #000B45;
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+        @media (max-width: 48rem) {
+            :root {
+                font-size: 14px;
+            }
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            .separator {
+                width: 80%;
+                height: 0.0625rem;
+                margin: 1.25rem 0;
+            }
+            .team, .contact-info {
+                width: 100%;
+                text-align: center;
+            }
+            .team .member {
+                justify-content: center;
+            }
+            .logo .title {
+                font-size: 1.75rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">
-            <div class="title">Pinaca Technologies Pvt. Ltd.</div>
             <div class="icon">
-                <img src="C:\Users\Vibhav\Desktop\SST\Pinaca" alt="Logo" />
+                <div class="background">
+                    <img src="./pinaca-logo.svg" alt="Logo" />
+                </div>
             </div>
+            <div class="title">Pinaca Technologies Pvt. Ltd.</div>
         </div>
         <div class="description">
             Our competence is in machine learning applications - natural language processing, translation, speech services and image/video analysis for law enforcement agencies, defense and private tech companies.
         </div>
-        <div class="social-icon" style="left: 540px; top: 797px;">
-            <div class="background"></div>
-            <div class="dot"></div>
-        </div>
-        <div class="social-icon" style="left: 540px; top: 843px;">
-            <div class="background"></div>
-            <div class="dot"></div>
-        </div>
-        <div class="team"style="gap:2px;">
-            <div <p class="member">Saikrishna B.V.S. (CEO)<br/><br/>Amit Ishwar Mehta (COO)</div>
-        </div>
-        <div class="contact-info">
-            <div class="title">CONTACT US</div>
-            <div class="details">
-                We are hiring!<br />
-                Reach out to <span style="font-weight: 600;">careers@pinacalabs.com</span><br />
-                for opportunities with us.
+        <div class="content-wrapper">
+            <div class="team">
+                <div class="member">
+                    <div class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </div>
+                    Saikrishna B.V.S. (CEO)
+                </div>
+                <div class="member">
+                    <div class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </div>
+                    Amit Ishwar Mehta (COO)
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="contact-info">
+                <div class="title">CONTACT US</div>
+                <div class="details">
+                    We are hiring!<br />
+                    Reach out to <span style="font-weight: 600;">careers@pinacalabs.com</span><br />
+                    for opportunities with us.
+                </div>
             </div>
         </div>
-        <div class="separator"></div>
     </div>
 </body>
 </html>
